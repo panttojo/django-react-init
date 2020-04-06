@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  postgres_db:
+    container_name: {{ cookiecutter.postgres_database_name }}
+    image: postgres:12.2-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER={{ cookiecutter.github_username }}
+      - POSTGRES_PASSWORD=Changeme132
+      - POSTGRES_DB={{ cookiecutter.postgres_database_name }}

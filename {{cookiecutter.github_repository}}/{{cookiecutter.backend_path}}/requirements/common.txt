@@ -1,0 +1,40 @@
+# Core Stuff
+# -------------------------------------
+Django==2.2
+
+# Configuration
+# -------------------------------------
+argon2-cffi==19.2.0
+django-environ==0.4.5
+django-sites==0.10
+python-dotenv==0.12.0
+{%- if cookiecutter.add_django_cors_headers.lower() == 'y' %}
+django-cors-headers==3.2.1
+{%- endif %}
+
+# Extensions
+# -------------------------------------
+pytz==2019.3
+
+# Models
+# -------------------------------------
+psycopg2-binary==2.8.5
+
+Pillow==7.1.1
+django-extensions==2.2.9
+django-file-upload-to==2.0.0
+django-versatileimagefield==2.0
+
+# REST APIs
+# -------------------------------------
+djangorestframework==3.11.0
+django-rest-swagger==2.2.0
+
+# LOGGING
+# -------------------------------------
+django-log-request-id==1.4.1
+
+# Auth Stuff
+# -------------------------------------
+PyJWT==1.7.1
+django-mail-templated==2.6.5

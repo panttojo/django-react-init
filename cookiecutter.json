@@ -1,0 +1,15 @@
+{
+    "project_name": "project",
+    "project_description": "Add a short project description here.",
+    "github_username": "panttojo",
+    "main_module": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
+    "github_repository": "{{ cookiecutter.main_module|replace('_', '-') }}",
+    "backend_path": "{{ cookiecutter.main_module }}_api",
+    "postgres_database_name": "{{ cookiecutter.main_module }}_db",
+    "timezone": "UTC",
+    "default_from_email": "{{ cookiecutter.project_name }} <panttoja.17@gmail.com>",
+    "version": "0.0.0",
+    "postgis": "n",
+    "add_django_auth_wall": "y",
+    "add_django_cors_headers": "y"
+}
