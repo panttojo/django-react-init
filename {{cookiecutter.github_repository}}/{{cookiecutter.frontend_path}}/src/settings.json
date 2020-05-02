@@ -1,0 +1,5 @@
+{
+    "SITE_SCHEME": "http",
+    "DOMAIN": "localhost:8000",
+    "API_PATH": "/api"
+}

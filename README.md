@@ -20,7 +20,11 @@ views for easier extensibility.
 - robots.txt and humans.txt configured
 
 ### Frontend
-- Coming soon
+- ReacJS 16.3.x
+- NPM 6.12.x
+- Redux 4.0.5
+- Basic folder structure
+- Auth Views `Login, Register, Reset Password, Recovery Password`
 
 ## Getting Started
 

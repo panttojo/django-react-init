@@ -17,14 +17,14 @@ echo "  - Run './manage.py migrate'."
 echo "  - Initialize git."
 echo "  - Create git tag {{ cookiecutter.version }}."
 echo "  - Create a super user"
-echo "Would you like to perform these steps? ([y]/n) "
+echo -n "Would you like to perform these steps? (y/[n]) "
 echo ""
 
 # Inside CI, always assume the answer is yes! :)
 if [ $CI ]; then
-    read  yn
-else
     yn="yes"
+else
+    read  yn
 fi
 
 if echo "$yn" | grep -iq "^y"; then
@@ -45,7 +45,7 @@ if echo "$yn" | grep -iq "^y"; then
     echo "==> Initialize git repo and create first commit and tag it with v{{ cookiecutter.version }}"
     git init
     git add .
-    git commit -am "chore(setup): create base django project."
+    git commit -am "chore(setup): Create base Django & ReactJS project."
     git tag v{{ cookiecutter.version }}
 
     echo "${green}==> Setup the database on postgres with docker-compose for local development${reset}"
@@ -60,11 +60,18 @@ if echo "$yn" | grep -iq "^y"; then
     OUT=$?
     if [ $OUT -eq 0 ]; then
         echo "${green}============================================"
-        echo "All set! Run these commands to get started:"
+        echo "All set! Run these commands to get started for the backend:"
         echo ""
         echo "cd {{ cookiecutter.github_repository }}/{{ cookiecutter.backend_path }}/"
         echo "fab test"
         echo "fab serve"
+        echo ""
+        echo "============================================"
+        echo "All set! Run these commands to get started for the frontend:"
+        echo ""
+        echo "cd {{ cookiecutter.github_repository }}/{{ cookiecutter.frontend_path }}/"
+        echo "npm install"
+        echo "nom start"
         echo ""
         echo "============================================"
         echo "${green} ============> HAPPY CODING <============ ${reset}"
