@@ -1,4 +1,4 @@
-{% raw %}{% extends "mail_templated/base.tpl" %}
+{% extends "mail_templated/base.tpl" %}
 {% load i18n %}
 {% load resolve_frontend_url from urls_extra %}
 
@@ -7,6 +7,9 @@
 
 {% block body %}
 {# ======== plain text version of email body #}
+{% blocktrans %}Hello, your username is:{% endblocktrans %} {{ user.username }}
+
+
 {% blocktrans %}You're receiving this email because you requested a password reset
 for your user account.{% endblocktrans %}
 
@@ -20,6 +23,9 @@ for your user account.{% endblocktrans %}
 
 {% block html %}
 {# ======== html version of email body #}
+{% blocktrans %}Hello, your username is:{% endblocktrans %} <strong>{{ user.username }}</strong>
+
+
 <p>{% blocktrans %}You're receiving this email because you requested a password reset
 for your user account.{% endblocktrans %}</p>
 
@@ -28,4 +34,4 @@ for your user account.{% endblocktrans %}</p>
 </p>
 
 <p>{% trans "Thanks for using our site!" %}</p>
-{% endblock html %}{% endraw %}
+{% endblock html %}

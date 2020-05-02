@@ -126,8 +126,8 @@ SITE_DOMAIN = env("SITE_DOMAIN", default="localhost:8000")
 SITE_NAME = env("SITE_NAME", default="{{ cookiecutter.project_name }}")
 
 # This is used in-case of the frontend is deployed at a different url than this django app.
-FRONTEND_SITE_SCHEME = env("FRONTEND_SITE_SCHEME", default="https")
-FRONTEND_SITE_DOMAIN = env("FRONTEND_SITE_DOMAIN", default="example.com")
+FRONTEND_SITE_SCHEME = env("FRONTEND_SITE_SCHEME", default="http")
+FRONTEND_SITE_DOMAIN = env("FRONTEND_SITE_DOMAIN", default="localhost:3000")
 FRONTEND_SITE_NAME = env("FRONTEND_SITE_NAME", default="{{ cookiecutter.project_name }}")
 
 SITES = {

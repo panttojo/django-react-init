@@ -34,7 +34,7 @@ class RegisterSerializer(serializers.Serializer):
         user = user_services.get_user_by_username(username=value)
         if user:
             raise serializers.ValidationError("Username is already taken.")
-        return value.encode('utf-8').strip()
+        return value
 
 
 class AuthUserSerializer(UserSerializer):
