@@ -3,7 +3,7 @@
     "project_description": "Add a short project description here.",
     "github_username": "panttojo",
     "main_module": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
-    "github_repository": "{{ cookiecutter.main_module|replace('_', '-') }}",
+    "github_repository": "{{ cookiecutter.main_module }}",
     "backend_path": "{{ cookiecutter.main_module }}_api",
     "frontend_path": "{{ cookiecutter.main_module }}_ui",
     "postgres_database_name": "{{ cookiecutter.main_module }}_db",
