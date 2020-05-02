@@ -6,7 +6,7 @@ Project template for Django based projects, optimized for making REST API and co
 ## Features
 
 ### Backend
-- Django 2.2.x
+- Django 2.2.10
 - Python 3.7.x
 - [Django Rest Framework][drf] 3.11.x.
 - [12-Factor][12factor] based settings management via [django-environ], reads settings from `.env` if present.
