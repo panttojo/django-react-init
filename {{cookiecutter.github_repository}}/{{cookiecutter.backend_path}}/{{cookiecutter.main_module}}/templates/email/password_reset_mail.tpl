@@ -1,4 +1,4 @@
-{% extends "mail_templated/base.tpl" %}
+{% raw %}{% extends "mail_templated/base.tpl" %}
 {% load i18n %}
 {% load resolve_frontend_url from urls_extra %}
 
@@ -34,4 +34,4 @@ for your user account.{% endblocktrans %}</p>
 </p>
 
 <p>{% trans "Thanks for using our site!" %}</p>
-{% endblock html %}
+{% endblock html %}{% endraw %}
