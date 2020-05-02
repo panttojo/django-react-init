@@ -15,6 +15,7 @@
     "add_django_cors_headers": "y",
     "_copy_without_render": [
         "*.js",
-        "{{ cookiecutter.frontend_path }}/*"
+        "{{ cookiecutter.frontend_path }}/*",
+        "{{ cookiecutter.main_module }}/templates/*"
     ]
 }
